@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import DocumentDetail from './DocumentDetail';
 
 function DocumentList({ documents }) {
   const documentsElement = documents.map((document, i) => (
     <li key={i}>
-      {/* document item element will go here  */}
+      <DocumentDetail markdown={document.markdown} integer={i}/>
     </li>
   ));
 
@@ -16,7 +17,10 @@ function DocumentList({ documents }) {
 }
 
 DocumentList.propTypes = {
-  documents: PropTypes.arrayOf(PropTypes.string).isRequired
+  documents: PropTypes.arrayOf(PropTypes.shapeOf({
+    integer: PropTypes.number.isRequired,
+    markdown: PropTypes.string.isRequired
+  })).isRequired
 };
 
 export default DocumentList;
