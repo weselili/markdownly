@@ -4,11 +4,11 @@ import Editor from './Editor';
 import styles from './Document.css';
 import PropTypes from 'prop-types';
 
-function Document({ markdown, updateMarkdown }) {
+function Document({ markdown, handleChange }) {
   return (
     <>
       <div className={styles.Document}>
-        <Editor markdown={markdown} updateMarkdown={updateMarkdown} />
+        <Editor markdown={markdown} handleChange={handleChange} />
         <Preview markdown={markdown} />
       </div>
     </>
@@ -17,7 +17,7 @@ function Document({ markdown, updateMarkdown }) {
 
 Document.propTypes = {
   markdown: PropTypes.string.isRequired,
-  updateMarkdown: PropTypes.func.isRequired
+  handleChange: PropTypes.func.isRequired
 };
 
 export default Document;

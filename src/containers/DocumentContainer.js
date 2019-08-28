@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { getMarkdown } from '../selectors/documentSelectors';
-import updateMarkdown from '../actions/documentActions';
+import Document from '../components/markdown/Document';
+import { updateMarkdown } from '../actions/documentActions';
 
 const mapStateToProps = state => ({
   markdown: getMarkdown(state)
