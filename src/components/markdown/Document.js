@@ -5,6 +5,7 @@ import styles from './Document.css';
 import PropTypes from 'prop-types';
 
 function Document({ markdown, handleChange }) {
+  console.log(markdown);;
   return (
     <>
       <div className={styles.Document}>
