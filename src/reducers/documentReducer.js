@@ -1,7 +1,8 @@
 import { UPDATE_MARKDOWN } from '../actions/documentActions';
 
 const initialState = {
-  markdown: '# Hi there'
+  markdown: '# Hi there',
+  documents: []
 };
 
 export default function documentReducer(state = initialState, action) {
