@@ -7,6 +7,5 @@ export const getCurrentDocument = state => state.document.currentDocument;
 export const getDocument = state => {
   const index = getCurrentDocument(state);
   const documents = getDocuments(state);
-  console.log(documents[index]);
   return documents[index];
 };

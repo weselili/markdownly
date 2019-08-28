@@ -12,9 +12,7 @@ export default function documentReducer(state = initialState, action) {
       // line 13 is making sure that our markdown is being edited in the correct document
       // editing the correct document 
       const index = state.currentDocument;
-      console.log('LANCE', state.currentDocument)
       newDocuments[index] = action.payload.markdown;
-      console.log(newDocuments);
       return { ...state, 
         documents: newDocuments };
     }
