@@ -4,7 +4,7 @@ import Preview from './Preview';
 
 describe('Preview component', () => {
   it('renders Preview', () => {
-    const wrapper = shallow(<Preview />);
+    const wrapper = shallow(<Preview markdown={'u'}/>);
     expect(wrapper).toMatchSnapshot();
   });
 });
