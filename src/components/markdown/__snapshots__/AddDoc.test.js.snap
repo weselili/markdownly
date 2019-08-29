@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddDoc component renders AddDoc 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <input
+    name="title"
+    placeholder="title"
+    type="text"
+    value=""
+  />
+  <button>
+    Add Document
+  </button>
+</form>
+`;
