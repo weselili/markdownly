@@ -1,8 +1,8 @@
 export const UPDATE_MARKDOWN = 'UPDATE_MARKDOWN';
 
-export const updateMarkdown = (markdown, currentDocument) => ({
+export const updateMarkdown = markdown => ({
   type: UPDATE_MARKDOWN,
-  payload: { markdown, currentDocument }
+  payload: { markdown }
 });
 
 export const UPDATE_CURRENT_DOCUMENT = 'UPDATE_CURRENT_DOCUMENT';
