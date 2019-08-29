@@ -1,23 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Documents({ documents }) {
-  const documentElement = documents.map(document => (
-    <li key={document.id}>
-      {document.title}
+function Documents({ titles }) {
+  const titlesElement = titles.map(title => (
+    <li key={title}>
+      {title}
     </li>
   ));
 
   return (
-    <ul>{documentElement}</ul>
+    <ul>{titlesElement}</ul>
   );
 }
 
 Documents.propTypes = {
-  documents: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired
-  })).isRequired
+  titles: PropTypes.array.isRequired
 };
 
 export default Documents;
