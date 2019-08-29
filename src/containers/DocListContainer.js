@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 import Documents from '../components/markdown/Documents';
-import { getTitle } from '../selectors/documentSelectors';
+import { getAllTitles } from '../selectors/documentSelectors';
 
 const mapStateToProps = state => ({
-  title: getTitle(state);
+  titles: getAllTitles(state)
 });
 
 export default connect(
