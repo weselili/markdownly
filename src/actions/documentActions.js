@@ -5,9 +5,9 @@ export const updateMarkdown = markdown => ({
   payload: markdown
 });
 
-export const GET_TITLE = 'GET_TITLE';
+export const UPDATE_TITLE = 'UPDATE_TITLE';
 
-export const getTitle = title => ({
-  type: GET_TITLE,
+export const updateTitle = title => ({
+  type: UPDATE_TITLE,
   payload: title
 });
