@@ -1,7 +1,7 @@
 
-export const getDocuments = state => state.document.documents;
+export const getDocuments = state => state.documents.documents;
 
-export const getCurrentDocument = state => state.document.currentDocument;
+export const getCurrentDocument = state => state.documents.currentDocument;
 
 // getting a document based on its integer
 export const getDocument = state => {

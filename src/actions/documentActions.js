@@ -7,7 +7,7 @@ export const updateMarkdown = markdown => ({
 
 export const UPDATE_CURRENT_DOCUMENT = 'UPDATE_CURRENT_DOCUMENT';
 
-export const updateCurrentDocument = (currentDocument) => ({
+export const updateCurrentDocument = (id) => ({
   type: UPDATE_CURRENT_DOCUMENT,
-  payload: currentDocument
+  payload: { id }
 });

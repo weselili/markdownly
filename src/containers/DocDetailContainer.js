@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import DocumentDetail from '../components/markdown/DocumentDetail';
+import Document from '../components/markdown/Document';
 import { getMarkdown } from '../selectors/documentSelectors';
 
 const mapStateToProps = state => ({
@@ -8,4 +8,4 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps
-)(DocumentDetail);
+)(Document);
