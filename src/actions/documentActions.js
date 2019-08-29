@@ -5,9 +5,9 @@ export const updateMarkdown = markdown => ({
   payload: markdown
 });
 
-export const UPDATE_TITLE = 'UPDATE_TITLE';
+export const CREATE_DOCUMENT = 'CREATE_DOCUMENT';
 
-export const updateTitle = title => ({
-  type: UPDATE_TITLE,
+export const createDocument = title => ({
+  type: CREATE_DOCUMENT,
   payload: title
 });

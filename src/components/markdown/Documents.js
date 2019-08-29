@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Documents({ titles }) {
-  const titlesElement = titles.map(title => (
+  const titleElements = titles.map(title => (
     <li key={title}>
       {title}
     </li>
   ));
 
   return (
-    <ul>{titlesElement}</ul>
+    <ul>{titleElements}</ul>
   );
 }
 
