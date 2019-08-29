@@ -6,6 +6,7 @@ exports[`AddDoc component renders AddDoc 1`] = `
 >
   <input
     name="title"
+    onChange={[Function]}
     placeholder="title"
     type="text"
     value=""
