@@ -2,14 +2,13 @@ import { UPDATE_MARKDOWN } from '../actions/documentActions';
 
 const initialState = {
   currentDocument: 0,
-  documents: ['hello']
+  documents: ['']
 };
 
 export default function documentReducer(state = initialState, action) {
   switch(action.type) {
     case UPDATE_MARKDOWN: {
       const newDocuments = [...state.documents];
-      // line 13 is making sure that our markdown is being edited in the correct document
       // editing the correct document 
       const index = state.currentDocument;
       newDocuments[index] = action.payload.markdown;

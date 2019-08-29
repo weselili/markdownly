@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 function DocumentDetail({ integer, markdown }) {
   return (
     <>
-      <h1>{integer}</h1>
+      <h4>{integer}</h4>
       <p>{markdown}</p>
-  </>
+    </>
   );
 }
 
