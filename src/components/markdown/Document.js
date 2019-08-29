@@ -4,9 +4,10 @@ import Editor from './Editor';
 import styles from './Document.css';
 import PropTypes from 'prop-types';
 
-function Document({ markdown, handleChange }) {
+function Document({ markdown, title, handleChange }) {
   return (
     <>
+      <h2>{title}</h2>
       <div className={styles.Document}>
         <Editor markdown={markdown} handleChange={handleChange} />
         <Preview markdown={markdown} />
@@ -17,6 +18,7 @@ function Document({ markdown, handleChange }) {
 
 Document.propTypes = {
   markdown: PropTypes.string.isRequired,
+  title: PropTypes.string,
   handleChange: PropTypes.func.isRequired
 };
 

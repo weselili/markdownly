@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Document from './Document';
 
-function Documents({ documents, title, markdown, }) {
+function Documents({ documents }) {
 
   const documentList = documents.map(document => (
     <li key={document.id}>
-      <Document title={title} markdown={markdown}/>
+      <Document title={document.title}/>
     </li>
   ));
 
@@ -18,9 +18,10 @@ function Documents({ documents, title, markdown, }) {
 }
 
 Documents.propTypes = {
-  documents: PropTypes.array.isRequired,
-  title: PropTypes.string.isRequired,
-  markdown: PropTypes.string.isRequired
+  documents: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    markdown: PropTypes.string.isRequired
+  })).isRequired,
 };
 
 export default Documents;
