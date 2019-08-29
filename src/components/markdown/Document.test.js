@@ -4,7 +4,7 @@ import Document from './Document';
 
 describe('Document component', () => {
   it('renders Document', () => {
-    const wrapper = shallow(<Document markdown={''} handleChange={() => ({})}/>);
+    const wrapper = shallow(<Document document={{}} handleChange={() => ({})}/>);
     expect(wrapper).toMatchSnapshot();
   });
 });

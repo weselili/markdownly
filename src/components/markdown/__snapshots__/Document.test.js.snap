@@ -2,16 +2,14 @@
 
 exports[`Document component renders Document 1`] = `
 <Fragment>
+  <h3 />
   <div
     className="Document"
   >
     <Editor
       handleChange={[Function]}
-      markdown=""
     />
-    <Preview
-      markdown=""
-    />
+    <Preview />
   </div>
 </Fragment>
 `;
