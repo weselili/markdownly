@@ -4,7 +4,7 @@ import Documents from './Documents';
 
 describe('Documents component', () => {
   it('renders Documents', () => {
-    const wrapper = shallow(<Documents titles={[]}/>);
+    const wrapper = shallow(<Documents titles={[]} setCurrentDocument={() => ({})}/>);
     expect(wrapper).toMatchSnapshot();
   });
 });
