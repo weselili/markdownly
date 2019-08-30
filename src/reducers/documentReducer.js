@@ -1,4 +1,4 @@
-import { UPDATE_MARKDOWN, CREATE_DOCUMENT } from '../actions/documentActions';
+import { UPDATE_MARKDOWN, CREATE_DOCUMENT, CHANGE_CURRENT_DOCUMENT } from '../actions/documentActions';
 
 const initialState = {
   documents: [{ title: 'title', markdown: '# Hello there' }],
@@ -13,8 +13,10 @@ export default function documentReducer(state = initialState, action) {
           { ...doc, markdown: action.payload } :
           doc; 
       }) };
+    case CHANGE_CURRENT_DOCUMENT:
+      return { ...state, currentDocument: action.payload };
     case CREATE_DOCUMENT:
-      return { ...state, documents: [...state.documents, { title: action.payload, markdown: '' }] }; 
+      return { ...state, documents: [...state.documents, { title: action.payload, markdown: '', id: state.documents.length }] }; 
     default:
       return state;
   }
